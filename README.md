@@ -1,8 +1,18 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+=>github link: https://github.com/novneetsingh/social-media (both server and client code)
 
-Currently, two official plugins are available:
+=>backend link: https://social-media-b8ro.onrender.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+apis:
+- /admin/signup (for admin register)
+- /admin/login (for login admin)
+- /admin/getAllUserDetails (for getting all submitted form data by user)
+- /user/submit (for filling userform data)
+
+=>frontend link: https://socialmedia-9vsg.onrender.com
+
+pages:
+- / (login page)
+- /userform 
+- /dashboard
