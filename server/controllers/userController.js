@@ -8,6 +8,20 @@ exports.createUser = async (req, res) => {
     // Destructure fields from the request body
     const { name, socialMediaHandle } = req.body;
 
+    if (!name || !socialMediaHandle || !req.files.images) {
+      return res
+        .status(400)
+        .json({ error: "Please provide all required fields." });
+    }
+
+    // check if socialMediaHandle already exists
+    const existingUser = await User.findOne({ socialMediaHandle });
+    if (existingUser) {
+      return res
+        .status(400)
+        .json({ error: "User with this social media handle already exists." });
+    }
+
     // Array to hold the URLs of uploaded images
     const uploadedImages = [];
 
